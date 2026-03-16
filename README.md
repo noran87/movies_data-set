@@ -1,62 +1,114 @@
-# Movie Recommendation System (IMDB Top 1000)
 
-This project builds a **content-based movie recommendation system** using the IMDB Top 1000 Movies dataset.
+# Movie Data Analysis & Recommendation Projects
 
-The goal is to recommend movies based on **genre similarity**, **movie quality**, and **audience popularity**, without using machine learning models.
+This repository contains three data projects exploring movie datasets using Python, Pandas, visualization libraries, and basic machine learning techniques.
 
-## Dataset
+The goal of these projects is to practice real-world data workflows including:
+- Data cleaning
+- Exploratory data analysis (EDA)
+- Data visualization
+- Recommendation systems
+- Basic machine learning concepts
 
-- Source: IMDB Top 1000 Movies (Kaggle)
-- Size: 1000 movies
-- Key features used:
-  - Genres (Genre, Subgenre, Subgenre 1)
-  - IMDB Rating
-  - Number of Votes
-  - Release Year
+---
 
-The dataset was cleaned and prepared in a separate EDA notebook before building the recommendation logic.
+# Project 1: Netflix Exploratory Data Analysis
 
-## Recommendation Logic
+Dataset: Netflix Titles
 
-Movies are recommended based on three main signals:
+This project explores the Netflix dataset to understand patterns in movie and TV show releases.
 
-- **Quality** → IMDB Rating  
-- **Popularity** → Number of Votes  
-- **Similarity** → Genre overlap  
+Key work:
+- Cleaned messy columns such as `duration`, `date_added`, `country`, `rating`, and `listed_in`
+- Converted text fields into structured data
+- Handled missing values
+- Created new columns such as year added and month added
 
-A custom score combines rating and vote count, and recommendations are ranked by:
-1. Number of shared genres  
-2. Overall recommendation score  
+Analysis included:
+- Netflix content growth over time
+- Movies vs TV shows distribution
+- Genre trends over time
+- Genre comparison between Movies and TV Shows
 
-All similarity and ranking values are computed **dynamically** based on user input.
+Tools used:
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
 
-## Features Implemented
+---
 
-- Genre-based recommendations  
-- Multi-genre overlap recommendations  
-- Similar-movie recommendations (“If you liked this movie, try these”)  
-- Minimum rating and vote thresholds  
-- Helper function for partial movie title search  
+# Project 2: IMDB Top 1000 Movies Analysis
 
+Dataset: IMDB Top 1000 Movies
 
-## Example Usage
+This project analyzes relationships between movie ratings, popularity, and genres.
 
-recommend_movies('Mystery')
+Data cleaning tasks:
+- Converted `Released_Year` to numeric format
+- Handled missing values in `Certificate`, `Subgenre`, `Meta_score`, and `Gross`
+- Standardized genre-related columns
 
-recommend_by_genres(['Thriller', 'Mystery'])
+Analysis included:
+- Do higher rated movies make more money?
+- Relationship between number of votes and ratings
+- Distribution of votes across rating tiers
+- Most voted movies on IMDB
+- Which genres receive the most audience votes
 
-find_title('fight')
-recommend_similar('Fight club')
+Tools used:
+- Pandas
+- Matplotlib
+- Seaborn
 
+---
 
-## Key Takeaways
+# Project 3: Movie Recommendation System (Machine Learning)
 
-- Recommendation systems can be built using clear, rule-based logic  
-- Genre similarity improves recommendation relevance  
-- Combining rating and popularity avoids niche or low-quality recommendations  
-- Explainable systems are valuable even without machine learning  
+Dataset: IMDB Top 1000 Movies
 
-## Conclusion
+This project builds a content-based movie recommender.
 
-This project focuses on building a **transparent and explainable recommendation engine** using real-world data.
-It demonstrates practical data cleaning, feature engineering, and recommendation logic design.
+Steps:
+1. Combine movie metadata (genre, subgenres, actors, director) into a text feature
+2. Convert text into numeric vectors using TF‑IDF
+3. Compute similarity between movies using cosine similarity
+4. Recommend movies based on similarity scores
+
+Core ML concepts used:
+- TF‑IDF Vectorization
+- Cosine Similarity
+- Similarity Matrix
+- Content-based recommendation
+
+The recommender works by comparing movie content and returning the most similar movies to the selected title.
+
+Tools used:
+- Pandas
+- Scikit-learn
+- TF-IDF Vectorizer
+- Cosine Similarity
+
+---
+
+# Repository Structure
+
+data/
+- datasets used for the projects
+
+notebooks/
+- netflix_eda.ipynb
+- imdb_analysis.ipynb
+- movie_recommender_ml.ipynb
+
+---
+
+# Conclusion
+
+These projects demonstrate a learning progression:
+
+1. Data cleaning and exploration
+2. Analytical insights from datasets
+3. Building a simple machine learning recommendation system
+
+The projects helped develop practical skills in data analysis, Python programming, and introductory machine learning techniques.
