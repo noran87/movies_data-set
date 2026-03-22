@@ -1,114 +1,152 @@
+# Movie Data Analysis & Machine Learning Portfolio
 
-# Movie Data Analysis & Recommendation Projects
+This repository contains a collection of projects focused on exploring movie datasets using Python, data analysis, and machine learning techniques.
 
-This repository contains three data projects exploring movie datasets using Python, Pandas, visualization libraries, and basic machine learning techniques.
-
-The goal of these projects is to practice real-world data workflows including:
-- Data cleaning
+The goal of this repository is to demonstrate a clear learning progression:
+- Data cleaning and preparation
 - Exploratory data analysis (EDA)
-- Data visualization
+- Insight generation
 - Recommendation systems
-- Basic machine learning concepts
+- Machine learning prediction
 
----
 
-# Project 1: Netflix Exploratory Data Analysis
+## Project 1: IMDB Top 1000 Analysis
 
-Dataset: Netflix Titles
+This project explores relationships between movie ratings, popularity, and genres.
 
-This project explores the Netflix dataset to understand patterns in movie and TV show releases.
-
-Key work:
-- Cleaned messy columns such as `duration`, `date_added`, `country`, `rating`, and `listed_in`
-- Converted text fields into structured data
+### Key Tasks
+- Cleaned and standardized columns
+- Converted data types
 - Handled missing values
-- Created new columns such as year added and month added
+- Compared different rating and vote patterns
 
-Analysis included:
-- Netflix content growth over time
-- Movies vs TV shows distribution
-- Genre trends over time
-- Genre comparison between Movies and TV Shows
+### Analysis
+- Relationship between ratings and number of votes
+- Relationship between ratings and revenue
+- Distribution of votes across rating groups
+- Most voted movies
+- Genre popularity patterns
 
-Tools used:
+### Tools
+- Pandas
+- Matplotlib
+- Seaborn
+
+
+## Project 2: Rule-Based Movie Recommendation System
+
+This project builds a rule-based movie recommender using movie metadata.
+
+### Approach
+- Created a recommendation score using IMDB rating and number of votes
+- Combined multiple genre columns into a structured genre representation
+- Built recommendation functions based on genre filters and similarity rules
+
+### Features Used
+- Genre
+- Subgenre
+- Subgenre 1
+- IMDB Rating
+- Number of Votes
+
+### Output
+- Recommends movies based on genre preferences
+- Recommends similar movies using genre overlap and ranking logic
+
+### Tools
 - Pandas
 - NumPy
-- Matplotlib
-- Seaborn
 
----
 
-# Project 2: IMDB Top 1000 Movies Analysis
+## Project 3: ML Movie Recommendation System
 
-Dataset: IMDB Top 1000 Movies
+This project builds a content-based movie recommender using TF-IDF and cosine similarity.
 
-This project analyzes relationships between movie ratings, popularity, and genres.
+### Approach
+- Combined movie metadata into a single text representation
+- Applied TF-IDF vectorization
+- Computed cosine similarity between movies
+- Ranked the most similar movies to generate recommendations
 
-Data cleaning tasks:
-- Converted `Released_Year` to numeric format
-- Handled missing values in `Certificate`, `Subgenre`, `Meta_score`, and `Gross`
-- Standardized genre-related columns
+### Features Used
+- Genre
+- Subgenre
+- Subgenre 1
+- Director
+- Star1
+- Star2
+- Star3
+- Star4
+- Certificate
 
-Analysis included:
-- Do higher rated movies make more money?
-- Relationship between number of votes and ratings
-- Distribution of votes across rating tiers
-- Most voted movies on IMDB
-- Which genres receive the most audience votes
+### Output
+- Recommends similar movies based on a given movie title
+- Includes title search support for easier matching
 
-Tools used:
+### Tools
 - Pandas
-- Matplotlib
-- Seaborn
+- Scikit-learn (TF-IDF, cosine similarity)
 
----
 
-# Project 3: Movie Recommendation System (Machine Learning)
+## Project 4: Movie Rating Predictor (Machine Learning)
 
-Dataset: IMDB Top 1000 Movies
+This project builds a classification model to predict whether a movie is highly rated (IMDB rating ≥ 8).
 
-This project builds a content-based movie recommender.
+### Objective
+Predict high-rated movies using numerical features.
 
-Steps:
-1. Combine movie metadata (genre, subgenres, actors, director) into a text feature
-2. Convert text into numeric vectors using TF‑IDF
-3. Compute similarity between movies using cosine similarity
-4. Recommend movies based on similarity scores
+### Features Used
+- Runtime
+- Meta_score
+- Number of Votes
 
-Core ML concepts used:
-- TF‑IDF Vectorization
-- Cosine Similarity
-- Similarity Matrix
-- Content-based recommendation
+### Methodology
+1. Created a binary target variable (`high_rating`)
+2. Selected relevant features
+3. Handled missing values
+4. Split data into training and testing sets
+5. Trained a Logistic Regression model
+6. Evaluated model performance using accuracy
 
-The recommender works by comparing movie content and returning the most similar movies to the selected title.
+### Results
+- Model accuracy: ~65%
+- Baseline accuracy: ~54%
 
-Tools used:
-- Pandas
-- Scikit-learn
-- TF-IDF Vectorizer
-- Cosine Similarity
+### Key Insights
+- Meta_score is the strongest predictor of high-rated movies
+- Runtime has a small positive effect
+- Number of votes has minimal impact
 
----
+### Conclusion
+This project demonstrates a complete machine learning workflow, including data preparation, model training, evaluation, and interpretation.
 
-# Repository Structure
+## Learning Progression
 
-data/
-- datasets used for the projects
+This repository follows a structured learning path:
 
-notebooks/
-- netflix_eda.ipynb
-- imdb_analysis.ipynb
-- movie_recommender_ml.ipynb
+1. Data Cleaning & Exploration  
+2. Data Analysis & Insights  
+3. Rule-Based Recommendation Systems  
+4. ML-Based Recommendation Systems  
+5. Machine Learning Prediction  
 
----
 
-# Conclusion
+## Future Improvements
 
-These projects demonstrate a learning progression:
+- Experiment with advanced models (Random Forest, Decision Trees)
+- Improve feature engineering
+- Add more features such as genres or directors to prediction tasks
+- Build an interactive app using Streamlit or Flask
 
-1. Data cleaning and exploration
-2. Analytical insights from datasets
-3. Building a simple machine learning recommendation system
 
-The projects helped develop practical skills in data analysis, Python programming, and introductory machine learning techniques.
+## Summary
+
+This repository demonstrates practical experience in:
+- Data cleaning and analysis
+- Feature engineering
+- Rule-based recommendation logic
+- ML-based recommendation using text similarity
+- Supervised machine learning workflows
+- Model evaluation and interpretation
+
+It serves as a strong foundation for more advanced data science and machine learning projects.
