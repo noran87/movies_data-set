@@ -1,4 +1,4 @@
-# Movie Data Analysis & Machine Learning Portfolio
+# 🎬 Movie Data Analysis & Machine Learning Portfolio
 
 This repository contains a collection of projects focused on exploring movie datasets using Python, data analysis, and machine learning techniques.
 
@@ -8,9 +8,11 @@ The goal of this repository is to demonstrate a clear learning progression:
 - Insight generation
 - Recommendation systems
 - Machine learning prediction
+- Model comparison and feature analysis
 
+---
 
-## Project 1: IMDB Top 1000 Analysis
+## 📊 Project 1: IMDB Top 1000 Analysis
 
 This project explores relationships between movie ratings, popularity, and genres.
 
@@ -32,8 +34,9 @@ This project explores relationships between movie ratings, popularity, and genre
 - Matplotlib
 - Seaborn
 
+---
 
-## Project 2: Rule-Based Movie Recommendation System
+## 🎯 Project 2: Rule-Based Movie Recommendation System
 
 This project builds a rule-based movie recommender using movie metadata.
 
@@ -57,8 +60,9 @@ This project builds a rule-based movie recommender using movie metadata.
 - Pandas
 - NumPy
 
+---
 
-## Project 3: ML Movie Recommendation System
+## 🤖 Project 3: ML Movie Recommendation System
 
 This project builds a content-based movie recommender using TF-IDF and cosine similarity.
 
@@ -87,10 +91,11 @@ This project builds a content-based movie recommender using TF-IDF and cosine si
 - Pandas
 - Scikit-learn (TF-IDF, cosine similarity)
 
+---
 
-## Project 4: Movie Rating Predictor (Machine Learning)
+## 📈 Project 4: Movie Rating Predictor v1 (Machine Learning)
 
-This project builds a classification model to predict whether a movie is highly rated (IMDB rating ≥ 8).
+This project builds a classification model to predict whether a movie is highly rated.
 
 ### Objective
 Predict high-rated movies using numerical features.
@@ -118,9 +123,55 @@ Predict high-rated movies using numerical features.
 - Number of votes has minimal impact
 
 ### Conclusion
-This project demonstrates a complete machine learning workflow, including data preparation, model training, evaluation, and interpretation.
+This project demonstrates a basic machine learning workflow and serves as a foundation for more advanced modeling.
 
-## Learning Progression
+---
+
+## 🚀 Project 5: Movie Rating Predictor v2 (Model Comparison & Feature Engineering)
+
+This project improves the previous model by adding richer features and comparing multiple machine learning algorithms.
+
+### Objective
+Classify whether a movie is highly rated (IMDb rating ≥ 7) using both numerical and categorical features.
+
+### Features Used
+- Runtime
+- Meta_score
+- Number of Votes
+- Release Year
+- Genre
+- Certificate
+- Director
+- Main Actor (Star1)
+
+### Improvements Over v1
+- Added categorical features (genre, director, actors)
+- Applied one-hot encoding
+- Built a full ML pipeline
+- Compared multiple models instead of using one
+
+### Models Used
+- Logistic Regression (baseline)
+- Decision Tree
+- Random Forest
+
+### Evaluation
+- Compared models using accuracy
+- Analyzed classification metrics (precision, recall, F1-score)
+- Used confusion matrix for deeper understanding
+
+### Key Insights
+- Random Forest achieved the best performance
+- Logistic Regression provided a strong and interpretable baseline
+- Decision Tree showed signs of overfitting
+- Number of votes and metascore were among the most important features
+
+### Conclusion
+This project demonstrates a more advanced machine learning workflow, including feature engineering, model comparison, and interpretation. It highlights the importance of both data quality and model selection in improving performance.
+
+---
+
+## 📚 Learning Progression
 
 This repository follows a structured learning path:
 
@@ -128,25 +179,46 @@ This repository follows a structured learning path:
 2. Data Analysis & Insights  
 3. Rule-Based Recommendation Systems  
 4. ML-Based Recommendation Systems  
-5. Machine Learning Prediction  
+5. Machine Learning Prediction (v1)  
+6. Model Improvement & Comparison (v2)  
 
+---
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Experiment with advanced models (Random Forest, Decision Trees)
-- Improve feature engineering
-- Add more features such as genres or directors to prediction tasks
+- Tune model hyperparameters (Random Forest, Decision Tree)
+- Reduce high-cardinality features (group rare directors/actors)
+- Apply cross-validation
+- Try regression models (predict exact rating)
+- Use a dataset with a wider range of ratings
 - Build an interactive app using Streamlit or Flask
 
+---
 
-## Summary
+## 🧰 Tools & Libraries
+
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+
+---
+
+## 📌 Summary
 
 This repository demonstrates practical experience in:
-- Data cleaning and analysis
-- Feature engineering
-- Rule-based recommendation logic
-- ML-based recommendation using text similarity
-- Supervised machine learning workflows
-- Model evaluation and interpretation
 
-It serves as a strong foundation for more advanced data science and machine learning projects.
+- Data cleaning and preprocessing  
+- Exploratory data analysis (EDA)  
+- Feature engineering  
+- Rule-based recommendation systems  
+- ML-based recommendation systems  
+- Supervised machine learning  
+- Model comparison and evaluation  
+- Interpreting model results  
+
+It reflects a clear progression from basic data analysis to more advanced machine learning techniques.
+
+r
